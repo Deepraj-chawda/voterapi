@@ -27,7 +27,9 @@ chrome_options.add_experimental_option("prefs", {
     "download.prompt_for_download": False,
     "download.directory_upgrade": True
 })
-
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-dev-shm-usage')
 # Create a Chrome driver with the configured options
 driver = webdriver.Chrome(options=chrome_options)
 
